@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria vendas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tudo">
+        <div class="header-box">
+            <div class="header">
+                <img src="img/logo.webp" alt="logo" height="30px">
+                <nav class="menu">
+                    <ul class="navbar-itens">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#Produtos">Produtos</a></li>
+                        <li><a href="sobrenos.html">Sobre nós</a></li>
+                    </ul>
+                </nav>
+                <a href="login.html" class="login">Login</a>
+                <img src="img/worm.webp" alt="logo" height="30px">
+            </div>
+        </div>
+
+        <main>
+            <img class="divider" src="img/divider.webp" alt="divider">
+
+            <section>
+                <input id="campo-pesquisa" type="text" placeholder="Procure um livro!">
+                <button onclick="pesquisar()">Pesquisar</button>
+            </section>
+            <section class="resultados-pesquisa" id="resultados-pesquisa"></section>
+            
+        </main>
+    </div>
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

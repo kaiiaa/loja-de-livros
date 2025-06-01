@@ -1,12 +1,5 @@
 const dadosProdutos = {
-    novels: [
-{
-            nome : "Clear and muddy loss of love - 泾渭情殇",
-            descricao : "Esta é a primeira aventura da incrível série Gatos guerreiros (Warriors), que teve mais de 6 milhões de exemplares vendidos na Europa e nos Estados Unidos.Um fosso natural chamado rio Luo dividia a grande terra em duas partes: Jing ao norte, e Wei ao sul. Um era o Príncipe das planícies de grama, que não conhecia preocupações nem tristezas. O outro era uma Princesa justa, que recebia o favor exclusivo do Imperador. Uma guerra transformou o Príncipe das planícies de grama em órfão. Aquela que havia permanecido em silêncio por dez anos originalmente planejava tornar-se uma oficial bajuladora, para manipular o reino inimigo e lançá-lo no caos — mas foi nomeada como Fuma no banquete de Chionglin. Espere e veja como essa dívida de rancor, fruto de um reino caído e um lar destruído, será resolvida.",
-            img : "img/jwqs.webp",
-            preco: "R$ 60,99"
-        },
-    ],
+
     manga: [
         {
             nome : "O cara que estou a fim não é um cara - Volume 1",
@@ -18,7 +11,7 @@ const dadosProdutos = {
             nome : "Delicous in dungeon - Volume 1",
             descricao : "Depois de serem atacados por um dragão, o grupo do aventureiro Laios acaba perdendo todo seu dinheiro e provisões. Assim, mesmo que o grupo tente adentrar novamente o calabouço, é certo que eles morrerão de fome... Diante dessa situação, Laios acaba tendo uma ideia: Comer os monstros pelo caminho, desde slimes até dragões!!",
             img : "img/delicous01.webp",
-            preco: "R$ 37,90"
+            preco: "R$ 42,90"
         },
         {
             nome : "Nana - Volume 2",
@@ -48,7 +41,7 @@ const dadosProdutos = {
             nome : "Nana - Volume 1",
             descricao : "Nana Komatsu é uma garota do interior com simples objetivos de vida e que se apaixona facilmente à primeira vista. Nana Oosaki é a vocalista de uma banda punk e tem como um de seus objetivos fazer com que sua banda estoure nas paradas. Sonhos tão distintos, para duas garotas com o mesmo nome… Descubra o que o destino reserva para as “duas Nanas”.",
             img : "img/nana1.webp",
-            preco: "R$ 29,99"
+            preco: "R$ 30,99"
         }
     ],
     graphicnovels: [
@@ -91,7 +84,23 @@ const dadosProdutos = {
             descricao: "Minichaveiros das personagens principais de Witch Hat Atelier",
             img: "img/chaveiroswha.jpg",
             preco: "R$ 45,90"
+        },
+        {
+            nome: "Minichaveiros - Ivan e Sua",
+            descricao: "Ivan e Sua de AlienStage",
+            img: "img/alst1.jpg",
+            preco: "R$ 45,90"
         }
+        
+    ],
+    novels: [
+        {
+            nome : "Clear and muddy loss of love - 泾渭情殇",
+            descricao : "Esta é a primeira aventura da incrível série Gatos guerreiros (Warriors), que teve mais de 6 milhões de exemplares vendidos na Europa e nos Estados Unidos.Um fosso natural chamado rio Luo dividia a grande terra em duas partes: Jing ao norte, e Wei ao sul. Um era o Príncipe das planícies de grama, que não conhecia preocupações nem tristezas. O outro era uma Princesa justa, que recebia o favor exclusivo do Imperador. Uma guerra transformou o Príncipe das planícies de grama em órfão. Aquela que havia permanecido em silêncio por dez anos originalmente planejava tornar-se uma oficial bajuladora, para manipular o reino inimigo e lançá-lo no caos — mas foi nomeada como Fuma no banquete de Chionglin. Espere e veja como essa dívida de rancor, fruto de um reino caído e um lar destruído, será resolvida.",
+            img : "img/jwqs.webp",
+            preco: "R$ 80,99"
+        }
+
     ],
 };
 

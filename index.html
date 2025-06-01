@@ -7,6 +7,7 @@
     <link rel="icon" href="img/favicon.webp">
     <link rel="stylesheet" href="styleM.css">
     <link rel="stylesheet" href="produtos_style.css">
+    <script src="scriptMAIN.js"></script>
     
 </head>
 <body>
@@ -14,10 +15,11 @@
         <div class="container">
             <nav class="menu">
                 <ul class="menu-lista">
-                    <li><img src="img/gif.webp" alt="Ícone" onclick="filtrarProdutos('todos')"></li>
+                    <li>
+                        <img src="img/gif.webp" alt="Ícone" onclick="filtrarProdutos('todos')"></li>
 
                     <li class="dropdown">
-                        <span class="drop">Categorias ▾</span>
+                        <span class="drop">Categorias de produtos ▾</span>
                         <ul class="dropdown-menu">
                             <li><a href="#" onclick="filtrarProdutos('todos')">Todos</a></li>
                             <li><a href="#" onclick="filtrarProdutos('manga')">Mangás</a></li>
@@ -26,13 +28,15 @@
                             <li><a href="#" onclick="filtrarProdutos('outros')">Outros</a></li>
                         </ul>
                     </li>
-                    <li> <img src="img/sobre.webp"  alt="">Contato</li>
+                    <li> <img src="img/sobre.webp"  alt="">Sobre</li>
 
-                    <li> <img src="img/contato.webp" alt="">Sobre nós</li>
+                    <li> <img src="img/contato.webp" alt="">Contato</li>
 
                 </ul>
             </nav>
-            <div class="user-avatar" id="userAvatar">A</div>
+            <div class="user-avatar" id="userAvatar">
+                <img src="" alt="bu">
+            </div>
             <div class="login-container">
                 <div class="user-greeting" id="userGreeting" style="display: none;"></div>
                 <button id="loginButton" class="botao">Login</button>
@@ -48,7 +52,9 @@
         <div class="login-content">
             <div class="flexp">
                 <button id="closePopup">&times;</button>
+                <img src="img/gifbaleia.webp" alt="">
                 <h2>Login</h2>
+                <img src="img/gifcesta.webp" alt="">
             </div>
             <form id="loginForm">
                 <input type="email" id="email" placeholder="E-mail" required>
@@ -69,6 +75,7 @@
         </div>
         <div class="pesquisa-container">
             <input id="campo-pesquisa" type="text" placeholder="Pesquisar produtos ... !!">
+            
             <button class="botao" onclick="pesquisar()">Pesquisar</button>
         </div>
         
@@ -85,6 +92,12 @@
     <div class="imgsdividers2">
         <img src="img/divider2.png" alt="">
     </div>
+    <div class="peixe">
+        <img src="img/peixe.webp" alt="peixe">
+    </div>
+        <div class="peixe2">
+        <img src="img/peixe2.webp" alt="peixe">
+    </div>
     <footer class="footer">
         <div class="container-footer">
             <p>Loja do mirtilo - 2025</p>
@@ -92,10 +105,27 @@
     </footer>
 
     <!-- Firebase SDK -->
-    <script src="scriptMAIN.js"></script>
+    
+    
     <script src="auth.js"></script>
     <script src="produtos_script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-auth-compat.js"></script>
 
-    <script src="scriptMAIN.js"></script>
+    <script>
+        const firebaseConfig = {
+        apiKey: "AIzaSyAOb0fi4skGdmcGA68D2TFwiYuDlxGCaXM",
+        authDomain: "loja-de-livros-8b465.firebaseapp.com",
+        projectId: "loja-de-livros-8b465",
+        storageBucket: "loja-de-livros-8b465.firebasestorage.app",
+        messagingSenderId: "556264075539",
+        appId: "1:556264075539:web:491c9995df97543be3eae6",
+        measurementId: "G-Z96DPZ4H1J"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    </script>
+
+    
 </body>
 </html>

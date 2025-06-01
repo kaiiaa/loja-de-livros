@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bonbon&family=Delius&family=Geo:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Schoolbell&family=Supermercado+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
 
 * {
     margin: 0;
@@ -8,7 +10,7 @@
 }
 
 body{
-    font-family: "Delius", cursive;
+    font-family: var(--fonte3);
     font-weight: 400;
     font-style: normal;
 
@@ -112,22 +114,24 @@ body{
 }
 
 .dropdown-menu li a:hover {
-    color: #9a5fd1;
+    color: var(--cor6);
 }
 
 .botao {
-    background-color: #b886f1;
+    background-color: var(--cor4);
     border: var(--cor3);
     color: rgb(255, 255, 255);
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 80px;
+    font-family: var(--fonte1);
     text-decoration: none;
-    font-weight: 500;
+    font-size: medium;
+    font-weight: 700;
     transition: all 0.3s ease;
 }
 
 .botao:hover {
-    background-color: #8444ce;
+    background-color: var(--cor6);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -139,7 +143,7 @@ body{
 
 .menu-ativo {
     font-weight: bold !important;
-    color: #9a5fd1 !important;
+    color: var(--cor4) !important;
     border-bottom: 2px solid var(--cor3);
 }
 
@@ -152,6 +156,7 @@ body{
     color: var(--cor4);
     font-weight: bold;
 }
+
 
 /* Adicione estas regras ao final do arquivo */
 .principal {
@@ -232,6 +237,12 @@ body{
 .flexp button{
     padding: 0px;
 }
+.flexp img{
+    width: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
 
 
 .login-content h2 {
@@ -263,7 +274,7 @@ body{
     
     width: 40px;
     height: 40px;
-    background-color: #4CAF50;
+    background-color: var(--cor6);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -314,6 +325,39 @@ body{
 li img{
     margin-right: 10px;
 }
+.peixe{
+
+    position: fixed;
+    left: 10px;       /* Distância da borda esquerda */
+    bottom: 10px;     /* Distância da borda inferior (pode usar top também) */
+    z-index: 1000;    /* Garante que fique acima de outros elementos */
+    width: 70px;      /* Ajuste o tamanho conforme necessário */
+    height: auto;     /* Mantém a proporção */
+    opacity: 0.5;     /* Opcional: transparência */
+    transition: all 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+.peixe2{
+
+    position: fixed;
+    right: 50px;       /* Distância da borda esquerda */
+    bottom: 40px;     /* Distância da borda inferior (pode usar top também) */
+    z-index: 1000;     /* Ajuste o tamanho conforme necessário */
+    height: auto;     /* Mantém a proporção */
+    opacity: 0.5;     /* Opcional: transparência */
+    transition: all 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.peixe2 img{
+    width: 100px;
+}
+.peixe:hover{
+    opacity: 1;       /* Opcional: efeito ao passar o mouse */
+    transform: scale(1.05); /* Opcional: pequeno zoom */
+}
+.peixe2:hover{
+    opacity: 1;       /* Opcional: efeito ao passar o mouse */
+    transform: scale(1.05); /* Opcional: pequeno zoom */
+}
 
 :root{
     --cor1: #202026;
@@ -323,5 +367,6 @@ li img{
     --cor5: #ffffff;
     --cor6: #e19975;
     --fonte1: "Barriecito", system-ui;
-    --fonte2: "Knewave", system-ui;;
+    --fonte2: "Knewave", system-ui;
+    --fonte3: "Roboto Slab", serif;
 }

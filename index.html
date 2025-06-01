@@ -1,43 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria vendas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Loja do Mirtilo</title>
+    <link rel="icon" href="img/favicon.webp">
+    <link rel="stylesheet" href="styleM.css">
+    <link rel="stylesheet" href="produtos_style.css">
+    
 </head>
 <body>
-    <div id="tudo">
-        <div class="header-box">
-            <div class="header">
-                <img src="img/logo.webp" alt="logo" height="30px">
-                <nav class="menu">
-                    <ul class="navbar-itens">
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="#Produtos">Produtos</a></li>
-                        <li><a href="sobrenos.html">Sobre nós</a></li>
-                    </ul>
-                </nav>
-                <a href="login.html" class="login">Login</a>
-                <img src="img/worm.webp" alt="logo" height="30px">
+    <div class="cabecalho">
+        <div class="container">
+            <nav class="menu">
+                <ul class="menu-lista">
+                    <li><img src="img/gif.webp" alt="Ícone" onclick="filtrarProdutos('todos')"></li>
+
+                    <li class="dropdown">
+                        <span class="drop">Categorias ▾</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="filtrarProdutos('todos')">Todos</a></li>
+                            <li><a href="#" onclick="filtrarProdutos('manga')">Mangás</a></li>
+                            <li><a href="#" onclick="filtrarProdutos('graphicnovels')">GraphicNovels</a></li>
+                            <li><a href="#" onclick="filtrarProdutos('novels')">Novels</a></li>
+                            <li><a href="#" onclick="filtrarProdutos('outros')">Outros</a></li>
+                        </ul>
+                    </li>
+                    <li> <img src="img/sobre.webp"  alt="">Contato</li>
+
+                    <li> <img src="img/contato.webp" alt="">Sobre nós</li>
+
+                </ul>
+            </nav>
+            <div class="user-avatar" id="userAvatar">A</div>
+            <div class="login-container">
+                <div class="user-greeting" id="userGreeting" style="display: none;"></div>
+                <button id="loginButton" class="botao">Login</button>
+                <button id="logoutButton" class="botao" style="display: none;">Logout</button>
             </div>
         </div>
-
-        <main>
-            <img class="divider" src="img/divider.webp" alt="divider">
-
-            <section>
-                <input id="campo-pesquisa" type="text" placeholder="Procure um livro!">
-                <button onclick="pesquisar()">Pesquisar</button>
-            </section>
-            <section class="resultados-pesquisa" id="resultados-pesquisa"></section>
             
-        </main>
     </div>
-    <script src="dados.js"></script>
-    <script src="script.js"></script>
+
+
+    <!-- POPUP DE LOGIN -->
+    <div id="loginPopup" style="display: none;">
+        <div class="login-content">
+            <div class="flexp">
+                <button id="closePopup">&times;</button>
+                <h2>Login</h2>
+            </div>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit" class="botao solid">Entrar</button>
+                <button type="button" id="recover-password-button" class="botao clear">Recuperar Senha</button>
+                <button type="button" id="register-button" class="botao">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="principal">
+        <div class="imgsdividers">
+            <img src="img/divider.png"  alt="divider">
+            <img src="img/divider.png"  alt="divider">
+            <img src="img/divider.png"  alt="divider">
+            <img src="img/divider.png"  alt="divider">
+        </div>
+        <div class="pesquisa-container">
+            <input id="campo-pesquisa" type="text" placeholder="Pesquisar produtos ... !!">
+            <button class="botao" onclick="pesquisar()">Pesquisar</button>
+        </div>
+        
+
+        <div id="resultados-pesquisa">
+            <!-- Produtos serão inseridos aqui pelo JavaScript -->
+        </div>
+        <div class="imgsdividers">
+            <img src="img/divider3.png" alt="">
+            <img src="img/divider3.png" alt="">
+            <img src="img/divider3.png" alt="">
+        </div>
+    </div>
+    <div class="imgsdividers2">
+        <img src="img/divider2.png" alt="">
+    </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <p>Loja do mirtilo - 2025</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="scriptMAIN.js"></script>
+    <script src="auth.js"></script>
+    <script src="produtos_script.js"></script>
+
+    <script src="scriptMAIN.js"></script>
 </body>
 </html>

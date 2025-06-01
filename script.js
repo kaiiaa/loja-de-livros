@@ -1,42 +1,21 @@
-function exibirResultados(itens) {
-    let section = document.getElementById("resultados-pesquisa");
-    let resultados = "";
+function validacao() {
+    const emailValido = isEmailValid();
+    document.getElementById("botao-recuperar").disabled = !emailValido;
 
-    itens.forEach(dado => {
-        resultados += `
-            <div class="item-resultado">
-                <img  width=100px src="${dado.img}" alt="">
-                <h2><a href="${dado.link}" target="_blank">${dado.nome}</a></h2>
-                <p class="descricao-meta">${dado.descricao}</p>
-                <a href="${dado.link}" target="_blank" rel="noopener noreferrer">Mais Informações</a>
-            </div>
-        `;
-    });
-
-    section.innerHTML = resultados || "<p>Nenhum resultado encontrado.</p>";
+    const senhaValida = isPasswordValid();
+    document.getElementById("botao-entrar").disabled = !emailValido || !senhaValida;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    exibirResultados(dados);
-});
-
-function pesquisar() {
-    let campoPesquisa = document.getElementById("campo-pesquisa").value.toLowerCase().trim();
-
-    if (campoPesquisa === "") {
-        exibirResultados(dados);
-        return;
+function isEmailValid() {
+    const email = document.getElementById("email").value;
+    if (!email) {
+        return false;
     }
-
-    let resultadosFiltrados = dados.filter(dado =>
-        dado.nome.toLowerCase().includes(campoPesquisa)
-    );
-
-    exibirResultados(resultadosFiltrados);
+    return /\S+@\S+\.\S+/.test(email);
 }
 
-document.getElementById("campo-pesquisa").addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
-        pesquisar();
-    }
-});
+function isPasswordValid() {
+    const senha = document.getElementById("senha").value;
+    return !!senha; 
+}
+

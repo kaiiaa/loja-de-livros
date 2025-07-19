@@ -21,6 +21,14 @@ body{
     background-attachment: fixed; /* opcional: fixa a imagem ao rolar a página */
 
 }
+@keyframes expandir-letras {
+  0% {
+    letter-spacing: 1px;
+  }
+  100% {
+    letter-spacing: 2px;
+  }
+}
 
 .cabecalho {
     background-color: #ffffff;
@@ -63,6 +71,19 @@ body{
     position: relative;
     display: flex;
     align-items: center;
+}
+.prodcad{
+    color: #ffffff;
+
+    background-color: var(--cor6);
+    border-radius: 5px;
+}
+.prodcad:hover{
+    animation: expandir-letras 1s infinite alternate;
+    background-color: var(--cor4);
+    transform: translateY(-2px);
+
+
 }
 
 .menu-lista a {
@@ -358,6 +379,7 @@ li img{
     opacity: 1;       /* Opcional: efeito ao passar o mouse */
     transform: scale(1.05); /* Opcional: pequeno zoom */
 }
+
 
 :root{
     --cor1: #202026;

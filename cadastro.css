@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonbon&family=Delius&family=Geo:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Schoolbell&family=Supermercado+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+
+
+body {
+    font-family: var(--fonte1);
+    background-image:url(img/background2.webp) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 9%;
+}
+.voltar{
+    margin-top: -40px;
+    margin-left: -40px;
+    border-radius: 10px;
+    border-color: var(--cor5);
+    position: fixed;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    font-family: var(--fonte3);
+    background-color: var(--cor6);
+    font-size: medium;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--cor5);
+}
+
+.voltar:hover{
+    transform: translateY(-2px);
+    background-color: var(--cor3);
+}
+
+.container {
+    max-width: 33%;
+    /* margin: auto; */
+    background-color: var(--cor5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-family: var(--fonte3);
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cor4);
+    border-radius: 4px;
+}
+
+#cadastrarProduto{
+    font-family: var(--fonte3);
+    background-color: var(--cor6);
+    font-size: medium;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+#atualizarProduto{
+    font-family: var(--fonte3);
+    transition: all 0.3s ease;
+    font-size: medium;
+    font-weight: 700;
+    background-color: var(--cor6);
+
+}
+#deletarProduto{
+    font-family: var(--fonte3);
+    font-size: medium;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    background-color: var(--cor4);
+    
+}
+#buscarProduto{
+    font-family: var(--fonte3);
+    font-size: medium;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    background-color: var(--cor4);
+}
+
+
+#atualizarProduto:hover{
+    transform: translateY(-2px);
+    background-color: var(--cor3);
+}
+
+#deletarProduto:hover{
+    transform: translateY(-2px);
+    background-color: var(--cor3);
+}
+#buscarProduto:hover{
+    transform: translateY(-2px);
+    background-color: var(--cor3);
+}
+#cadastrarProduto:hover{
+    transform: translateY(-2px);
+    background-color: var(--cor3);
+}
+
+
+input[type="submit"] {
+    background-color: var(--cor6);
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--cor6);
+}
+
+.student-item {
+    padding: 10px;
+    border-bottom: 1px solid var(--cor3);
+}
+
+.student-item:last-child {
+    border-bottom: none;
+}
+
+#studentList{
+    width: 40%;
+}
+#studentTable{
+    width: 100%;
+}
+:root{
+    --cor1: #202026;
+    --cor2: #ceeaf5;
+    --cor3: #687794;
+    --cor4: #488bc2;
+    --cor5: #ffffff;
+    --cor6: #e19975;
+    --fonte1: "Barriecito", system-ui;
+    --fonte2: "Knewave", system-ui;
+    --fonte3: "Roboto Slab", serif;
+}

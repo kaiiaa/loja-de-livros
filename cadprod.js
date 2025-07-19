@@ -1,17 +1,5 @@
 
  //VOCÊ DEVE SUBSTITUIR A URL ABAIXO PELA URL DO IMPORT SEU PROJETO NO FIREBASE (CONFIGURAÇÕES CDN DO SEU PROJETO)
- import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-
- //VOCÊ DEVE SUBSTITUIR OS CÓDIGOS ABAIXOS CÓDIGOS DO SEU PROJETO NO FIREBASE (FIREBASE CONFIGURATION)
- const firebaseConfig = {
-    apiKey: "AIzaSyCe4iYHsApW4RpCl8-v0NgtUZP15RCcqsk",
-    authDomain: "firestore-bcfb7.firebaseapp.com",
-    databaseURL: "https://firestore-bcfb7-default-rtdb.firebaseio.com",
-    projectId: "firestore-bcfb7",
-    storageBucket: "firestore-bcfb7.appspot.com",
-    messagingSenderId: "405005781101",
-    appId: "1:405005781101:web:b7a64ef31fc86721a69764"
- };
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);

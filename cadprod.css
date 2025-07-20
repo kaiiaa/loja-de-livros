@@ -6,7 +6,7 @@
 
 body {
     font-family: var(--fonte1);
-    background-image:url(img/background2.webp) ;
+    background-image:url(img/background\ 2.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -64,52 +64,52 @@ input[type="text"] {
     border-radius: 4px;
 }
 
-#cadastrarProduto{
+#btnCadastrarProduto{
     font-family: var(--fonte3);
     background-color: var(--cor6);
     font-size: medium;
     font-weight: 700;
     transition: all 0.3s ease;
 }
-#atualizarProduto{
+#btnAtualizarProduto{
     font-family: var(--fonte3);
     transition: all 0.3s ease;
     font-size: medium;
     font-weight: 700;
-    background-color: var(--cor6);
+    background-color: var(--cor4);
 
 }
-#deletarProduto{
+#btnExcluirProduto{
     font-family: var(--fonte3);
     font-size: medium;
     font-weight: 700;
     transition: all 0.3s ease;
-    background-color: var(--cor4);
+    background-color: var(--cor6);
     
 }
-#buscarProduto{
+#btnBuscarProduto{
     font-family: var(--fonte3);
     font-size: medium;
     font-weight: 700;
     transition: all 0.3s ease;
-    background-color: var(--cor4);
+    background-color: var(--cor6);
 }
 
 
-#atualizarProduto:hover{
+#btnAtualizarProduto:hover{
     transform: translateY(-2px);
     background-color: var(--cor3);
 }
 
-#deletarProduto:hover{
+#btnExcluirProduto:hover{
     transform: translateY(-2px);
     background-color: var(--cor3);
 }
-#buscarProduto:hover{
+#btnBuscarProduto:hover{
     transform: translateY(-2px);
     background-color: var(--cor3);
 }
-#cadastrarProduto:hover{
+#btnCadastrarProduto:hover{
     transform: translateY(-2px);
     background-color: var(--cor3);
 }

@@ -6,7 +6,7 @@
 
 body {
     font-family: var(--fonte1);
-    background-image:url(img/background2.webp) ;
+    background-image:url(img/background\ 2.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -56,22 +56,31 @@ form {
     margin-bottom: 20px;
 }
 
-input[type="text"] {
+input {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid var(--cor4);
     border-radius: 4px;
 }
+button{
+    color: var(--cor5);
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cor);
+    border-radius: 4px;
+}
 
-#cadastrarProduto{
+#btnBuscarCliente{
     font-family: var(--fonte3);
     background-color: var(--cor6);
     font-size: medium;
     font-weight: 700;
     transition: all 0.3s ease;
 }
-#atualizarProduto{
+#btnCadastrarCliente{
     font-family: var(--fonte3);
     transition: all 0.3s ease;
     font-size: medium;
@@ -79,7 +88,7 @@ input[type="text"] {
     background-color: var(--cor6);
 
 }
-#deletarProduto{
+#btnLimparCliente{
     font-family: var(--fonte3);
     font-size: medium;
     font-weight: 700;
@@ -87,7 +96,14 @@ input[type="text"] {
     background-color: var(--cor4);
     
 }
-#buscarProduto{
+#btnAtualizarCliente{
+    font-family: var(--fonte3);
+    font-size: medium;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    background-color: var(--cor4);
+}
+#btnExcluirCliente{
     font-family: var(--fonte3);
     font-size: medium;
     font-weight: 700;
@@ -96,24 +112,27 @@ input[type="text"] {
 }
 
 
-#atualizarProduto:hover{
+#btnBuscarCliente:hover{
     transform: translateY(-2px);
     background-color: var(--cor3);
 }
 
-#deletarProduto:hover{
+#btnCadastrarCliente:hover{
     transform: translateY(-2px);
     background-color: var(--cor3);
 }
-#buscarProduto:hover{
+#btnAtualizarCliente:hover{
     transform: translateY(-2px);
     background-color: var(--cor3);
 }
-#cadastrarProduto:hover{
+#btnExcluirCliente:hover{
     transform: translateY(-2px);
     background-color: var(--cor3);
 }
-
+#btnLimparCliente:hover{
+    transform: translateY(-2px);
+    background-color: var(--cor3);
+}
 
 input[type="submit"] {
     background-color: var(--cor6);

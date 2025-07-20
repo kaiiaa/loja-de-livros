@@ -3,45 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management</title>
+    <title>Gestão de Produtos</title>
     <link rel="stylesheet" href="cadprod.css">
 </head>
-<a href="index.html" class="voltar">ᐊ Voltar</a>
+<body>
+    <a href="index.html" class="voltar">ᐊ Voltar</a>
     
     <div class="container">
-        <center>        <img src="img/divider4.webp" width="300px"></center>
-
+        <center><img src="img/divider4.webp" width="300px"></center>
         <h1>CADASTRO DE PRODUTOS</h1>
-            <form id="formCadastroProduto">
-                <input type="text" id="codigoProduto" placeholder="Código do Produto" required>
-                <input type="text" id="nomeProduto" placeholder="Nome do Produto" required>
-                <input type="text" id="categoriaProduto" placeholder="Categoria">
-                <input type="number" id="quantidadeProduto" placeholder="Quantidade">
-                <input type="number" step="0.01" id="valorProduto" placeholder="Valor">
-                
-                <div class="action-buttons">
-                    <button type="button" id="btnCadastrarProduto" class="btn-cadastrar">Cadastrar</button>
-                    <button type="button" id="btnLimparProduto" class="btn-limpar">Limpar</button>
-                </div>
-            </form>
-    </div>
-    <div class="container">
-                <center>        <img src="img/divider5.webp" width="300px"></center>
-        <h1>BUSCA E ATUALIZAÇÃO NOS PRODUTOS</h1>
-            <form id="formCadastroProduto">
-                <input type="text" id="codigoProduto" placeholder="Código do Produto" required>
-                <input type="text" id="nomeProduto" placeholder="Nome do Produto" required>
-                <input type="text" id="categoriaProduto" placeholder="Categoria">
-                <input type="number" id="quantidadeProduto" placeholder="Quantidade">
-                <input type="number" step="0.01" id="valorProduto" placeholder="Valor">
-                
-                <div class="action-buttons">
-                    <button type="button" id="btnCadastrarProduto" class="btn-cadastrar">Cadastrar</button>
-                    <button type="button" id="btnLimparProduto" class="btn-limpar">Limpar</button>
-                </div>
-            </form>
+        <input type="text" id="codigoProduto" placeholder="Código do Produto" required>
+        <input type="text" id="nomeProduto" placeholder="Nome do Produto" required>
+        <input type="text" id="categoriaProduto" placeholder="Categoria">
+        <input type="number" id="quantidadeProduto" placeholder="Quantidade">
+        <input type="number" step="0.01" id="valorProduto" placeholder="Valor">
+        <input id="btnCadastrarProduto" type="submit" value="Cadastrar Produto">
     </div>
 
-    <script type="module" src="cadprod.css"></script>
+    <div class="container">
+        <center><img src="img/divider5.webp" width="300px"></center>
+        <h1>BUSCA E ATUALIZAÇÃO</h1>
+        <input type="text" id="buscaCodigoProduto" placeholder="Código do Produto" required>
+        <input id="btnBuscarProduto" type="submit" value="Buscar Produto" style="background-color: #0598dc;">
+
+        <input type="text" id="editarNomeProduto" placeholder="Nome do Produto">
+        <input type="text" id="editarCategoriaProduto" placeholder="Categoria">
+        <input type="number" id="editarQuantidadeProduto" placeholder="Quantidade">
+        <input type="number" step="0.01" id="editarValorProduto" placeholder="Valor">
+
+        <input id="btnAtualizarProduto" type="submit" value="Atualizar Produto" style="background-color: #dcb105;">
+        <input id="btnExcluirProduto" type="submit" value="Excluir Produto" style="background-color: #dc0905;">
+    </div>
+
+    <script type="module" src="cadprod.js"></script>
 </body>
 </html>

@@ -1,4 +1,15 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import { getDatabase, ref, set, get, update, remove } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyAOb0fi4skGdmcGA68D2TFwiYuDlxGCaXM",
+    authDomain: "loja-de-livros-8b465.firebaseapp.com",
+    projectId: "loja-de-livros-8b465",
+    storageBucket: "loja-de-livros-8b465.firebasestorage.app",
+    messagingSenderId: "556264075539",
+    appId: "1:556264075539:web:491c9995df97543be3eae6",
+    measurementId: "G-Z96DPZ4H1J"
+  };
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase();
@@ -11,6 +22,7 @@ const telefoneCliente = document.getElementById('telefoneCliente');
 const enderecoCliente = document.getElementById('enderecoCliente');
 const cidadeCliente = document.getElementById('cidadeCliente');
 const estadoCliente = document.getElementById('estadoCliente');
+const btnCadastrarCliente = document.getElementById('btnCadastrarCliente');
 
 // Elementos do formulário de gerenciamento
 const buscaCpfCliente = document.getElementById('buscaCpfCliente');
@@ -20,31 +32,21 @@ const editarTelefoneCliente = document.getElementById('editarTelefoneCliente');
 const editarEnderecoCliente = document.getElementById('editarEnderecoCliente');
 const editarCidadeCliente = document.getElementById('editarCidadeCliente');
 const editarEstadoCliente = document.getElementById('editarEstadoCliente');
-const dadosCliente = document.getElementById('dadosCliente');
+const btnBuscarCliente = document.getElementById('buscarCliente');
+const btnAtualizarCliente = document.getElementById('atualizarCliente');
+const btnExcluirCliente = document.getElementById('excluirCliente');
 
-// Botões
-const btnCadastrarCliente = document.getElementById('btnCadastrarCliente');
-const btnLimparCliente = document.getElementById('btnLimparCliente');
-const btnBuscarCliente = document.getElementById('btnBuscarCliente');
-const btnAtualizarCliente = document.getElementById('btnAtualizarCliente');
-const btnExcluirCliente = document.getElementById('btnExcluirCliente');
-
-// Função para cadastrar cliente
 function cadastrarCliente() {
-    // Validação básica
     if (!cpfCliente.value || !nomeCliente.value) {
         alert('CPF e Nome são obrigatórios!');
         return;
     }
 
-    // Verifica se o cliente já existe
     get(ref(db, 'Clientes/' + cpfCliente.value))
         .then((snapshot) => {
             if (snapshot.exists()) {
-                alert('Já existe um cliente cadastrado com este CPF!');
-                return;
+                alert('Já existe um cliente com este CPF!');
             } else {
-                // Cadastra o novo cliente
                 set(ref(db, 'Clientes/' + cpfCliente.value), {
                     cpf: cpfCliente.value,
                     nome: nomeCliente.value,
@@ -83,11 +85,8 @@ function buscarCliente() {
                 editarEnderecoCliente.value = cliente.endereco || '';
                 editarCidadeCliente.value = cliente.cidade || '';
                 editarEstadoCliente.value = cliente.estado || '';
-                
-                dadosCliente.style.display = 'block';
             } else {
                 alert('Cliente não encontrado!');
-                dadosCliente.style.display = 'none';
             }
         })
         .catch((error) => {
@@ -133,8 +132,7 @@ function excluirCliente() {
         remove(ref(db, 'Clientes/' + cpf))
             .then(() => {
                 alert('Cliente excluído com sucesso!');
-                limparFormularioGerenciamento();
-                dadosCliente.style.display = 'none';
+                limparBusca();
             })
             .catch((error) => {
                 console.error('Erro ao excluir:', error);
@@ -154,7 +152,7 @@ function limparFormularioCadastro() {
     estadoCliente.value = '';
 }
 
-function limparFormularioGerenciamento() {
+function limparBusca() {
     buscaCpfCliente.value = '';
     editarNomeCliente.value = '';
     editarEmailCliente.value = '';
@@ -187,7 +185,6 @@ editarTelefoneCliente.addEventListener('input', function(e) {
 
 // Event listeners
 btnCadastrarCliente.addEventListener('click', cadastrarCliente);
-btnLimparCliente.addEventListener('click', limparFormularioCadastro);
 btnBuscarCliente.addEventListener('click', buscarCliente);
 btnAtualizarCliente.addEventListener('click', atualizarCliente);
 btnExcluirCliente.addEventListener('click', excluirCliente);
